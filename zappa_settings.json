@@ -1,0 +1,21 @@
+{
+    "dev": {
+        "app_function": "app.app",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "project_name": "acronamer",
+        "runtime": "python3.6",
+        "s3_bucket": "zappa-acronamer-dev"
+    },
+    "prod": {
+        "app_function": "app.app",
+        "aws_region": "us-east-1",
+        "profile_name": "default",
+        "project_name": "acronamer",
+        "runtime": "python3.6",
+        "s3_bucket": "zappa-acronamer",
+        "certificate_arn": "TBD",
+        "domain": "www.acronamer.com",
+        "route53_enabled": false
+    }
+}
