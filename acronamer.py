@@ -1,7 +1,10 @@
 
 
-import requests
-from bs4 import BeautifulSoup
+import nltk
+nltk.download('wordnet')
+
+from nltk.corpus import wordnet as wn
+
 
 # get synonyms for each word
 
