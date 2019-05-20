@@ -16,6 +16,12 @@ def get_synonyms(word):
 	return synonyms
 
 
+def get_all_synonyms(words):
+	synonyms = {}
+	for w in words:
+		synonyms[w]:get_synonyms(w)
+	return synonyms
+
 
 # generate all possible acronyms
 
