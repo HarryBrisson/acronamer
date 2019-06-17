@@ -32,7 +32,7 @@ def generate_possible_acroynms(list_of_words):
 	synonym_sets = itertools.product(*synonyms)
 	for s in synonym_sets:
 		acronym = {
-			'name': "".join([w[0] for w in s]).lower(),
+			'abbr': "".join([w[0] for w in s]).lower(),
 			'words': s,
 			}
 		possible_acronyms += [acronym]
