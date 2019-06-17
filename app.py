@@ -16,7 +16,7 @@ def endpoints():
 @app.route('/get-acronyms')
 def return_acronyms_via_api():
     try:
-        words = request.args.get('words')
+        words = request.args.get('words').split(',')
         data = acronamer(words)
         return json.dumps({'data':data})
     except Exception as e:
