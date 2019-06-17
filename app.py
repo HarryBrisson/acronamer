@@ -17,8 +17,7 @@ def endpoints():
 def return_acronyms_via_api():
     try:
         words = request.args.get('words')
-        order = request.args.get('order')
-        data = get_acronyms(words,order)
+        data = acronamer(words)
         return json.dumps({'data':data})
     except Exception as e:
         return json.dumps({'error':str(e)})
