@@ -1,5 +1,7 @@
 
 
+import itertools
+
 import nltk
 nltk.download('wordnet')
 
@@ -24,6 +26,18 @@ def get_all_synonyms(words):
 
 
 # generate all possible acronyms
+def generate_possible_acroynms(list_of_words):
+	possible_acronyms = []
+	synonyms = [get_synonyms(w) for w in list_of_words]
+	synonym_sets = itertools.product(*synonyms)
+	for s in synonym_sets:
+		acronym = {
+			'name': "".join([w[0] for w in s]).lower(),
+			'words': s,
+			}
+		possible_acronyms += [acronym]
+	return possible_acronyms
+
 
 
 # check to see what acronyms are words
