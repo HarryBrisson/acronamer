@@ -49,3 +49,8 @@ def filter_out_non_words(possible_acronyms):
 	return final_acronym_list
 
 
+def acronamer(list_of_words):
+	possible_acronyms = generate_possible_acroynms(list_of_words)
+	final_acronym_list = filter_out_non_words(possible_acronyms)
+	return final_acronym_list
+
