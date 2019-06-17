@@ -39,5 +39,13 @@ def generate_possible_acroynms(list_of_words):
 	return possible_acronyms
 
 
-
 # check to see what acronyms are words
+def filter_out_non_words(possible_acronyms):
+	final_acronym_list = []
+	for a in possible_acronyms:
+		word_details = wn.synsets(a['name'])
+		if len(word_details)>0:
+			final_acronym_list += [a]
+	return final_acronym_list
+
+
