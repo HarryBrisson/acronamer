@@ -3,7 +3,11 @@
 import itertools
 
 import nltk
-nltk.download('wordnet')
+
+## import to run the below pre-zappa
+#nltk.download('wordnet',download_dir='nltk_data')
+
+nltk.data.path += ['nltk_data']
 
 from nltk.corpus import wordnet as wn
 
